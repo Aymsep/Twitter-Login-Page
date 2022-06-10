@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--preloader page with twitter logo in the middle of the page -->
+    <div id="preloader-page">
+        <img src="images/twitter-preloader.png" alt="" width="65px">
+    </div>
+    <!--div container for aligning form in the middle of the page using flexbox properties-->
+
+        <div class="container">
+            <!--div form containing all form elements-->
+
+            <div class="form">
+                <!--div containing two span to make an X icon -->
+
+                <div class="bar-icon">
+                    <span class="first-bar"></span>
+                    <span class="second-bar"></span>
+                    </div>
+
+                    <!--img of twitter logo-->
+                <img class="twitter-img" src="images/twitter.png" alt="" width="35px">
+
+                <!--first header-->
+                <h1>Sign in to Twitter</h1>
+
+                <!--first button for sign in using google -->
+                <button class="google" type="submit">Sign in with Google</button>
+
+                <!--second button for sign in using apple id-->
+                <button class="apple" type="submit">Sign in with Apple</button>
+
+                <!--or paragraph containing two line after and before look at css file-->
+                <p>or</p>
+
+                <!--div containig email field and label , i use div for the animation-->
+                <div class="input-animation">
+                <input class="email-field"type="email" placeholder="">
+                <label for="" class="label-input">Phone, email , or username</label>
+                </div>
+
+                <!--button with next value-->
+                <button class="next"type="submit">Next</button>
+
+                <!--button of forget password-->
+                <button type="submit">Forgot password?</button>
+
+                <!--last header in the form-->
+                <h4>Don't have an account? <a href="">Sign up</a></h4>
+
+            </div>
+        </div>
+        <!--simple javascript code to load the preloader page after 3 second-->
+        <!--i used the internal javascript just because it's small script , but it's not recommended anyway-->
+        <script>
+            const loader = document.getElementById("preloader-page");
+            setTimeout(() => loader.style.display = "none" , 3000)
+        </script>
+        <!--end of script-->
+</body>
+</html>

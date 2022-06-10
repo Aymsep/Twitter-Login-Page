@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+body{
+    background-color: #242d34;
+
+}
+/*preloader page before the actual website*/
+#preloader-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    position:fixed;
+}
+/*animation the img to spin */
+#preloader-page img{
+    animation: spin 0.5s linear alternate infinite;
+}
+/*animate the img*/
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(45deg);
+    }
+}
+/*container to place the form in the middle*/
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    margin: 0 auto;
+}
+/*align items inside the form in shape of column*/
+.form{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    align-items: center;
+    background-color: black;
+    width: 600px;
+    height:650px;
+    border-radius:13px;
+    gap: 20px;
+}
+/*style div bar*/
+.bar-icon{
+    align-self: flex-start;
+    position: relative;
+    }
+/*styling two span to make X */
+.first-bar, .second-bar{
+        top: 25px;
+        left: 15px;
+        position: absolute; ;
+        cursor:pointer;
+        background-color: white;
+        width:20px;
+        height: 3px;
+        border-radius:50px;
+    }
+/*rotate the first span 45deg*/
+.first-bar{
+        transform:rotate(45deg);
+    }
+/*rotate the first span -45deg*/
+
+.second-bar{
+        transform:rotate(-45deg);
+    }
+    
+/*form img position*/
+.form img{
+    padding-top:15px;
+}
+/*form first header*/
+.form h1{
+    color: white;
+    line-height:55px;
+    font-weight: bold;
+}
+/*form sign in button*/
+button.google , button.apple{
+    cursor:pointer;
+    width:50%;
+    font-weight:100;
+    font-size: 16px;
+    padding:10px 0;
+    border-radius: 100px;
+    border: transparent;
+}
+/*put google icon before button */
+.form button.google::before{
+    content:" ";    
+    background: url("images/google.png") no-repeat;
+    background-size: 23px 15px;
+    display:inline-block;
+    width: 23px;
+    height: 15px;
+    padding-left:7px;
+}
+/*put apple icon before button */
+
+.form button.apple::before{
+    content:" ";    
+    background: url("images/apple.png") no-repeat;
+    background-size: 23px 15px;
+    display:inline-block;
+    width: 23px;
+    height: 15px;
+    padding-left:10px;
+}
+/*form paragraph*/
+.form p{
+    color: white;
+    font-size:19px;
+}
+/*paragraph after and before lines*/
+.form p::after{
+    content: '';
+    display: inlin-block;
+    position: absolute;
+    width:128px;
+    height: 3px;
+    background-color: rgb(63, 63, 63);
+    margin:11px 0 0 9px;
+  }
+.form p::before{
+   content: '';
+   position:absolute;
+   background-color: rgb(63, 63, 63);
+   width: 128px;
+   height: 3px;
+   display:inline-block;
+   margin: 11px 0 0 -138px;
+  }
+  /*input email field div */
+.input-animation{
+    display: flex;
+    position: relative;
+    flex-wrap:wrap;
+}
+/*email field*/
+.input-animation  input{
+    cursor:pointer;
+    padding:23px 110px 10px;
+    border-radius: 8px;
+    background-color:transparent;
+    padding-left:15px;
+    color: white;
+    font-size:18px;
+    border-color:rgb(63, 63, 63);
+    outline: none;
+    z-index: 1;
+}
+/*label*/
+.input-animation .label-input{
+    color:#71767b;
+    position:absolute;
+    top: 1.1rem;
+    left: 0.7rem;
+    font-size: 18px;
+    transition:0.3s;
+}
+/*when field is focus the label move to top*/
+.email-field:focus + .label-input{
+    top: 0.4rem;
+    color: #136aa5;
+    font-size: 15px;
+}
+.email-field:focus{
+    border-color:#136aa5;
+}
+/*third button*/
+.form button.next{
+    cursor:pointer;
+    width: 50%;
+    border-radius:100px;
+    padding: 7px 0;
+    font-size:18px;
+    font-weight:100;
+}
+/*last button*/
+.form button:last-of-type{
+    cursor:pointer;
+    width: 50%;
+    font-size: 16px;
+    font-weight:100 ;
+    padding: 7px 0;
+    background-color:transparent;
+    color: white;
+    border-radius:100px;
+    border-color:rgb(63, 63, 63);
+}
+/*last button animation on hover*/
+.form button:last-of-type:hover{
+    transition:background-color 0.5s ease-out;
+    background-color:rgba(74, 77, 80, 0.289);
+    border-color:rgb(62, 65, 68);
+}
+/*last header*/
+.form h4{
+    color:#71767b;
+    padding:35px 0;
+    margin: 0 0 0 -75px;    
+}
+/*last header anchor move underline*/
+.form h4 a{
+    color: #136aa5;
+    text-decoration: none;
+}
+/*last header underline on hover*/
+.form h4 a:hover{
+    text-decoration: underline;
+}
+/*end of body styles*/
+
+/*media  queries for small and medium screen*/
+@media screen and (max-width:768px){
+    /*change the background color to black*/
+    body{
+        background-color: black;
+    }
+    /*move twitter img to the top*/
+    .twitter-img{
+        position: absolute;
+        top: 0;
+    } 
+    /*move the X span to the top*/
+    .bar-icon{
+        position:static;
+    }
+}
