@@ -33,6 +33,7 @@ body{
 }
 /*container to place the form in the middle*/
 .container{
+   
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -49,7 +50,7 @@ body{
     width: 600px;
     height:650px;
     border-radius:13px;
-    gap: 20px;
+    flex-wrap:wrap ;
 }
 /*style div bar*/
 .bar-icon{
@@ -66,6 +67,7 @@ body{
         width:20px;
         height: 3px;
         border-radius:50px;
+        margin-bottom:80px;
     }
 /*rotate the first span 45deg*/
 .first-bar{
@@ -78,24 +80,31 @@ body{
     }
     
 /*form img position*/
-.form img{
+.form .fa-twitter{
     padding-top:15px;
+    color: white;
+    font-size:35px;
+    padding-top: 30px;
 }
 /*form first header*/
 .form h1{
     color: #ffffff;
     line-height:55px;
     font-weight: bold;
+    margin-bottom: 25px;
 }
 /*form sign in button*/
 button.google , button.apple{
     cursor:pointer;
-    width:50%;
+    width:60%;
     font-weight:100;
     font-size: 16px;
     padding:10px 0;
     border-radius: 100px;
     border: transparent;
+    background-color:#ffffff;
+    margin-bottom: 25px;
+
 }
 /*put google icon before button */
 .form button.google::before{
@@ -122,6 +131,7 @@ button.google , button.apple{
 .form p{
     color: #ffffff;
     font-size:19px;
+    margin-bottom: 25px;
 }
 /*paragraph after and before lines*/
 .form p::after{
@@ -151,15 +161,18 @@ button.google , button.apple{
 /*email field*/
 .input-animation  input{
     cursor:pointer;
-    padding:23px 110px 10px;
+    width: 100%;
+    padding:23px 80px 10px;
     border-radius: 8px;
     background-color:transparent;
     padding-left:15px;
     color: white;
     font-size:18px;
-    border-color:rgb(63, 63, 63);
+    border:2px solid rgb(63, 63, 63);
     outline: none;
     z-index: 1;
+    margin-bottom: 25px;
+
 }
 /*label*/
 .input-animation .label-input{
@@ -187,6 +200,9 @@ button.google , button.apple{
     padding: 7px 0;
     font-size:18px;
     font-weight:100;
+    background-color:#ffffff;
+    margin-bottom: 25px;
+
 }
 /*last button*/
 .form button:last-of-type{
@@ -198,7 +214,7 @@ button.google , button.apple{
     background-color:transparent;
     color: #ffffff;
     border-radius:100px;
-    border-color:rgb(63, 63, 63);
+    border:2px solid rgb(63, 63, 63);
 }
 /*last button animation on hover*/
 .form button:last-of-type:hover{
@@ -229,6 +245,9 @@ button.google , button.apple{
     body{
         background-color: black;
     }
+    /* .form{
+        gap: 100px;
+    } */
     /*move twitter img to the top*/
     .twitter-img{
         position: absolute;
